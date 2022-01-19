@@ -1,0 +1,36 @@
+/* Компонент LOGO */
+
+.logo {
+  color: var(--logo-basic-text-color);
+
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  @include cssTransition(color);
+
+  &__accent {
+    color: var(--primary-text-accent-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--primary-text-accent-color);
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  color: var(--secondary-text-color);
+}

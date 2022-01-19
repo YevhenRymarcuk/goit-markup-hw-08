@@ -1,0 +1,96 @@
+/* Список работ студии */
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--flexbox-items-gap));
+  margin-left: calc(-1 * var(--flexbox-items-gap));
+}
+
+.works-list__item {
+  margin-top: var(--flexbox-items-gap);
+  margin-left: var(--flexbox-items-gap);
+
+  flex-basis: calc(100% / 3 - var(--flexbox-items-gap));
+}
+
+.works-list__caption-border {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.works-list__link-box {
+  @include cssTransition(box-shadow);
+}
+
+.works-list__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .works-list__link-box {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+.works-list__thumb {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.works-list__overlay {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(0);
+
+  @include cssTransition(transform);
+}
+
+.works-list__link:hover .works-list__overlay,
+.works-list__link:focus .works-list__overlay {
+  transform: translateY(-100%);
+}
+
+.works-list__overlay-text {
+  padding: 0 24px;
+
+  color: var(--secondary-text-color);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+}
+
+.works-list__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.works-list__text {
+  color: var(--primary-text-color);
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  text-align: left;
+}

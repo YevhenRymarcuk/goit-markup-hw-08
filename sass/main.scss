@@ -1,0 +1,26 @@
+// Переменные
+@import './utils/variables';
+
+// Базовые стили
+@import './utils/base-styles';
+
+// Утилиты/Миксины
+@import './utils/mixins/button';
+@import './utils/mixins/transition';
+
+// Разделы/компоненты сайта
+// 1. Страница "Студия"
+@import './components/studio/header';
+@import './components/studio/logo';
+@import './components/studio/hero';
+@import './components/studio/modal';
+@import './components/studio/benefits';
+@import './components/studio/services';
+@import './components/studio/team';
+@import './components/studio/social-links-list';
+@import './components/studio/regular-clients';
+@import './components/studio/footer';
+
+// 2. Страница "Портфолио"
+@import './components/portfolio/filters-list';
+@import './components/portfolio/works-list';

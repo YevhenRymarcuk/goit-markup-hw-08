@@ -1,0 +1,37 @@
+/* Преимущества / особенности ВебСтудии */
+
+.benefits-list {
+  display: flex;
+}
+
+.benefits-list__item {
+  flex-basis: calc(100% - (3 * var(--flexbox-items-gap) / 4));
+
+  &:not(:last-child) {
+    margin-right: var(--flexbox-items-gap);
+  }
+}
+
+.benefits-list__icon-box {
+  width: 270px;
+  height: 120px;
+  margin-bottom: var(--flexbox-items-gap);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--section-bg-color);
+
+  border-radius: 4px;
+}
+
+.benefits-list__item-title {
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

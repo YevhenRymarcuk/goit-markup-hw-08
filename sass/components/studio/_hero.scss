@@ -1,0 +1,80 @@
+/* Блок "ГЕРОЙ"*/
+.hero {
+  background-color: var(--secondary-bg-color);
+  min-height: 600px;
+}
+
+.hero__content {
+  max-width: 1600px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/background-hero.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  color: var(--secondary-text-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.button {
+  @include button(
+    $position: 0,
+    $top: 0,
+    $right: 0,
+    //$transformTranslate заполнять как: (x%, y%)
+    $transformTranslate: 0,
+    $display: block,
+    $justifyContent: 0,
+    $alignItems: 0,
+    $width: 200px,
+    $height: 50px,
+    $margin: 0 auto,
+    $padding: (
+      0,
+    ),
+    $border: none,
+    $borderRadius: 4px,
+    $backgroundColor: var(--secondary-button-color),
+    $color: var(--secondary-text-color),
+    // $boxShadow, если теней более одной,
+    // заполнять в круглых скобках, через запятую и
+    // пробел: (<тень>, <тень>)
+    $boxShadow: 0,
+    // $fontFamily, если значений более одного,
+    // заполнять в круглых скобках, через запятую и
+    // пробел: (<значение>, <значение>)
+    $fontFamily: 0,
+    $fontStyle: 0,
+    $fontWeight: bold,
+    $fontSize: 16px,
+    $lineHeight: 1.87,
+    $textAlign: 0,
+    $letterSpacing: 0.06em
+  );
+
+  @include cssTransition(box-shadow background-color);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--tertiary-element-accent-color);
+  }
+}

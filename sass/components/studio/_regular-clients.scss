@@ -1,0 +1,44 @@
+/* Постоянные клиенты */
+
+.clients-list {
+  display: flex;
+}
+
+.clients-list__item {
+  flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
+
+  &:not(:last-child) {
+    margin-right: var(--flexbox-items-gap);
+  }
+}
+
+.clients-list__icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--primary-icon-color);
+  border-radius: 4px;
+
+  @include cssTransition(border-color);
+}
+
+.clients-list__icon {
+  fill: var(--primary-icon-color);
+
+  @include cssTransition(fill);
+}
+
+.clients-list__link:hover,
+.clients-list__link:focus {
+  & .clients-list__icon-box {
+    border: 1px solid var(--primary-element-accent-color);
+  }
+
+  & .clients-list__icon {
+    fill: var(--primary-element-accent-color);
+  }
+}

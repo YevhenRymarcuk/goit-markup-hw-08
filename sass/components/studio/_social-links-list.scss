@@ -1,0 +1,50 @@
+/* Ссылки на социальные сети */
+
+.social-networks-list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 206px;
+  height: 44px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-networks-list__icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50px;
+
+  @include cssTransition(background-color);
+
+  &--another {
+    background-color: var(--secondary-bg-color-icon);
+  }
+}
+
+.social-networks-list__icon {
+  fill: var(--primary-icon-color);
+
+  @include cssTransition(fill);
+
+  &--another {
+    fill: var(--secondary-icon-color);
+  }
+}
+
+.social-networks-list__link:hover,
+.social-networks-list__link:focus {
+  & .social-networks-list__icon-box {
+    background-color: var(--primary-element-accent-color);
+  }
+
+  & .social-networks-list__icon {
+    fill: var(--secondary-element-accent-color);
+  }
+}

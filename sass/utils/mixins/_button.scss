@@ -1,0 +1,137 @@
+@mixin button(
+  $position: 0,
+  $top: 0,
+  $right: 0,
+  $transformTranslate: 0,
+  $display: 0,
+  $justifyContent: 0,
+  $alignItems: 0,
+  $width: 0,
+  $height: 0,
+  $margin: 0,
+  $padding: 0,
+  $border: 0,
+  $borderRadius: 0,
+  $backgroundColor: 0,
+  $color: 0,
+  $boxShadow: 0,
+  $fontFamily: 0,
+  $fontStyle: 0,
+  $fontWeight: 0,
+  $fontSize: 0,
+  $lineHeight: 0,
+  $textAlign: 0,
+  $letterSpacing: 0
+) {
+  @if $position != 0 {
+    position: $position;
+  }
+  @if $top != 0 {
+    top: $top;
+  }
+  @if $right != 0 {
+    right: $right;
+  }
+  @if $transformTranslate != 0 {
+    transform: $transformTranslate;
+  }
+  @if $display != 0 {
+    display: $display;
+  }
+  @if $justifyContent != 0 {
+    justify-content: $justifyContent;
+  }
+  @if $alignItems != 0 {
+    align-items: $alignItems;
+  }
+  @if $width != 0 {
+    width: $width;
+  }
+  @if $height != 0 {
+    height: $height;
+  }
+  @if $margin != 0 {
+    margin: $margin;
+  }
+  @if $padding != 0 {
+    padding: $padding;
+  }
+  @if $border != 0 {
+    border: $border;
+  }
+  @if $borderRadius != 0 {
+    border-radius: $borderRadius;
+  }
+  @if $backgroundColor != 0 {
+    background-color: $backgroundColor;
+  }
+  @if $color != 0 {
+    color: $color;
+  }
+  @if $boxShadow != 0 {
+    box-shadow: $boxShadow;
+  }
+  @if $fontFamily != 0 {
+    font-family: $fontFamily;
+  }
+  @if $fontStyle != 0 {
+    font-style: $fontStyle;
+  }
+  @if $fontWeight != 0 {
+    font-weight: $fontWeight;
+  }
+  @if $fontSize != 0 {
+    font-size: $fontSize;
+  }
+  @if $lineHeight != 0 {
+    line-height: $lineHeight;
+  }
+  @if $textAlign != 0 {
+    text-align: $textAlign;
+  }
+  @if $letterSpacing != 0 {
+    letter-spacing: $letterSpacing;
+  }
+}
+
+// // Шаблон для поключения //
+/*
+
+@include button(
+  $position: 0,
+  $top: 0,
+  $right: 0,
+  //$transformTranslate заполнять как: (x%, y%)
+  $transformTranslate: 0,
+  $display: block,
+  $justifyContent: 0,
+  $alignItems: 0,
+  $width: 0,
+  $height: 0,
+  $margin: 0 auto,
+  $padding: 10px 32px,
+  $border: none,
+  $borderRadius: 4px,
+  $backgroundColor: var(--secondary-button-color),
+  $color: var(--secondary-text-color),
+  // $boxShadow, если теней более одной,
+  // заполнять в круглых скобках, через запятую и
+  // пробел: (<тень>, <тень>)
+  $boxShadow: 0,
+  // $fontFamily, если значений более одного,
+  // заполнять в круглых скобках, через запятую и
+  // пробел: (<значение>, <значение>)
+  $fontFamily:
+    (
+      Roboto,
+      sans-serif,
+    ),
+  $fontStyle: normal,
+  $fontWeight: bold,
+  $fontSize: 16px,
+  $lineHeight: 1.87,
+  $textAlign: center,
+  $letterSpacing: 0.06em
+);
+
+*/

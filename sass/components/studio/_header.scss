@@ -1,0 +1,111 @@
+/* I. Стили главной страницы */
+/* Шапка сайта */
+
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+  }
+}
+
+.nav,
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.nav-list__link {
+  display: inline-block;
+
+  position: relative;
+
+  padding: 32px 0;
+
+  color: var(--title-text-color);
+  text-decoration: none;
+
+  @include cssTransition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-text-accent-color);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: var(--primary-element-accent-color);
+
+    opacity: 0;
+  }
+}
+
+.nav-list__link.current {
+  color: var(--primary-text-accent-color);
+}
+
+.current.nav-list__link::after {
+  opacity: 1;
+}
+
+.contact-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.contact-list__mail,
+.contact-list__phone {
+  color: var(--primary-text-color);
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+
+  padding: 32px 0;
+
+  @include cssTransition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-text-accent-color);
+  }
+}

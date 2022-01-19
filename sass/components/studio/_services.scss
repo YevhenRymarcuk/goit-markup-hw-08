@@ -1,0 +1,38 @@
+/* Услуги ВебСтудии */
+
+.services-list {
+  display: flex;
+}
+
+.services-list__item {
+  position: relative;
+
+  flex-basis: calc(100% - (2 * var(--flexbox-items-gap)) / 3);
+
+  &:not(:last-child) {
+    margin-right: var(--flexbox-items-gap);
+  }
+}
+
+.services-list__item-overlay {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.services-list__item-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}

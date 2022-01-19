@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+        integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+    
+        <div class="container header__container">
+    
+            <!-- Раздел навигации -->
+            <nav class="nav">
+                <a class="logo" href="./index.html">
+                    <span class="logo__accent">Web</span>Studio
+                </a>
+    
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a class="nav-list__link" href="./index.html">Студия</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link current" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <!-- Ссылки на контакты сайта -->
+            <ul class="contact-list">
+                <li class="contact-list__item">
+                    <a class="contact-list__mail" href="mailto:info@devstudio.com">
+                        <svg width="16" height="12" class="contact-list__icon">
+                            <use href="./images/icons.svg#envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="contact-list__item">
+                    <a class="contact-list__phone" href="tel:+380961111111">
+                        <svg width="10" height="16" class="contact-list__icon">
+                            <use href="./images/icons.svg#smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Главное (уникальное) содержсодержимое страницы -->
+    <main class="main-content">
+
+        <!-- Портфолио студии с фильтрами работ -->
+        <section class="section">
+            <h2 class="section__title visually-hidden">Портфолио студии</h2>
+
+            <!-- Список фильтров -->
+            <div class="container">
+
+                <ul class="filters-list">
+                    <li class="filters-list__item">
+                        <button class="filters-list__button" type="button">Все</button>
+                    </li>
+                    <li class="filters-list__item">
+                        <button class="filters-list__button" type="button">Веб-сайты</button>
+                    </li>
+                    <li class="filters-list__item">
+                        <button class="filters-list__button" type="button">Приложения</button>
+                    </li>
+                    <li class="filters-list__item">
+                        <button class="filters-list__button" type="button">Дизайн</button>
+                    </li>
+                    <li class="filters-list__item">
+                        <button class="filters-list__button" type="button">Маркетинг</button>
+                    </li>
+                </ul>
+          
+                <!-- Список работ студии -->
+                <ul class="works-list">
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/technocrack.jpg" 
+                                    alt="Личные фото технических специалистов ВебСтудии"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Технокряк</h3>
+                                    <p class="works-list__text">Веб-сайт</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/match-poster.jpg" 
+                                    alt="Образец предматчевого постера New Orlean vs Golden Star с игроками баскетбольных команд"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Постер New Orlean vs Golden Star</h3>
+                                    <p class="works-list__text">Дизайн</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/seafood-restaurant.jpg" 
+                                    alt="Логотип ресторана Seafood"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Ресторан Seafood</h3>
+                                    <p class="works-list__text">Приложение</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/project-prime.jpg" 
+                                    alt="Логотип проекта (наушники)"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Проект Prime</h3>
+                                    <p class="works-list__text">Маркетинг</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/project-boxes.jpg" 
+                                    alt="Логотип проекта (блоки проета в виде коробочек)"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Проект Boxes</h3>
+                                    <p class="works-list__text">Приложение</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/product-of-inspiration.jpg" 
+                                    alt="Монитор с креативно оформленой страницей сайта"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Inspiration has no Borders</h3>
+                                    <p class="works-list__text">Веб-сайт</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/edition-design.jpg" 
+                                    alt="Страницы печатного издания с дизайнерским оформлением"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Издание Limited Edition</h3>
+                                    <p class="works-list__text">Дизайн</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/project-lab.jpg" 
+                                    alt="Логотип проекта в виде белого бумажного ярлычка"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Проект LAB</h3>
+                                    <p class="works-list__text">Маркетинг</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a class="works-list__link" href="#">
+                            <div class="works-list__link-box">
+                                <div class="works-list__thumb">
+                                    <img class="works-list__image" src="./images/studios-portfolio/growing-business.jpg" 
+                                    alt="Пользователь с гаджетом, использующий приложение Growing Business"
+                                    width="370"
+                                    height="294">
+                                    <div class="works-list__overlay">
+                                        <p class="works-list__overlay-text">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium suscipit laboriosam omnis! Recusandae sint
+                                            necessitatibus numquam autem, illum repudiandae minima?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="works-list__caption-border">
+                                    <h3 class="works-list__title">Growing Business</h3>
+                                    <p class="works-list__text">Приложение</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="information-about-us">
+                <div class="our-contacts">
+                    <a class="logo footer__logo" href="./index.html">
+                        <span class="logo__accent">Web</span>Studio
+                    </a>
+    
+                    <address class="address">
+                        <p class="address__map">г. Киев, пр-т Леси Украинки, 26,</p>
+    
+                        <a class="address__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class="address__phone" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </address>
+                </div>
+    
+                <div class="our-social-networks">
+                    <h3 class="our-social-networks__title">
+                        Присоединяйтесь
+                    </h3>
+                    <ul class="social-networks-list">
+                        <li class="social-networks-list__item">
+                            <a class="social-networks-list__link" href="#" aria-label="">
+                                <div class="social-networks-list__icon-box social-networks-list__icon-box--another">
+                                    <svg width="20" height="20"
+                                        class="social-networks-list__icon social-networks-list__icon--another">
+                                        <use href="./images/icons.svg#instagram"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="social-networks-list__item">
+                            <a class="social-networks-list__link" href="#">
+                                <div class="social-networks-list__icon-box social-networks-list__icon-box--another">
+                                    <svg width="20" height="20"
+                                        class="social-networks-list__icon social-networks-list__icon--another">
+                                        <use href="./images/icons.svg#twitter"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="social-networks-list__item">
+                            <a class="social-networks-list__link" href="#">
+                                <div class="social-networks-list__icon-box social-networks-list__icon-box--another">
+                                    <svg width="20" height="20"
+                                        class="social-networks-list__icon social-networks-list__icon--another">
+                                        <use href="./images/icons.svg#facebook"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="social-networks-list__item">
+                            <a class="social-networks-list__link" href="#">
+                                <div class="social-networks-list__icon-box social-networks-list__icon-box--another">
+                                    <svg width="20" height="20"
+                                        class="social-networks-list__icon social-networks-list__icon--another">
+                                        <use href="./images/icons.svg#linkedin"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="our-newsletter">
+                    <h3 class="our-newsletter__title">
+                        Подпишитесь на рассылку
+                    </h3>
+    
+                    <form class="form footer__form">
+                        <label class="form__label form__label--no-margin">
+                            <input class="form__input form__input--footer-style" type="email" name="users-email"
+                                placeholder="E-mail">
+                        </label>
+    
+                        <button class="button footer__button" type="submit">
+                            Подписаться
+                            <svg width="24" height="24" class="footer__button-icon">
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
