@@ -241,10 +241,12 @@ input {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .nav,
@@ -410,17 +412,25 @@ input {
 }
 
 .hero__title {
-  width: 696px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
   color: var(--secondary-text-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .button {
@@ -743,10 +753,12 @@ input {
 }
 
 /* Преимущества / особенности ВебСтудии */
-.benefits-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .benefits-list__item {
@@ -826,10 +838,12 @@ input {
 }
 
 /* Наша команда */
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .team-list__item {
@@ -939,14 +953,17 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(-1 * var(--flexbox-items-gap));
+  margin-left: calc(-1 * var(--flexbox-items-gap));
 }
 
 .clients-list__item {
-  -ms-flex-preferred-size: calc(100% - (5 * var(--flexbox-items-gap) / 6));
-      flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
-}
-.clients-list__item:not(:last-child) {
-  margin-right: var(--flexbox-items-gap);
+  margin-top: var(--flexbox-items-gap);
+  margin-left: var(--flexbox-items-gap);
+  -ms-flex-preferred-size: calc(100% / 2 - var(--flexbox-items-gap));
+      flex-basis: calc(100% / 2 - var(--flexbox-items-gap));
 }
 
 .clients-list__icon-box {
@@ -1003,10 +1020,12 @@ input {
   background-color: var(--secondary-bg-color);
 }
 
-.information-about-us {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .information-about-us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .address {

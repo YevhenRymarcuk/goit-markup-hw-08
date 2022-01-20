@@ -1,7 +1,9 @@
 /* Наша команда */
 
 .team-list {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .team-list__item {

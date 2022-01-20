@@ -1,7 +1,9 @@
 /* Преимущества / особенности ВебСтудии */
 
 .benefits-list {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .benefits-list__item {

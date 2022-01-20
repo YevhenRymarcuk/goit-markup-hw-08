@@ -2,14 +2,28 @@
 
 .clients-list {
   display: flex;
+
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--flexbox-items-gap));
+  margin-left: calc(-1 * var(--flexbox-items-gap));
 }
 
 .clients-list__item {
-  flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
+  margin-top: var(--flexbox-items-gap);
+  margin-left: var(--flexbox-items-gap);
 
-  &:not(:last-child) {
-    margin-right: var(--flexbox-items-gap);
-  }
+  flex-basis: calc(100% / 2 - var(--flexbox-items-gap));
+
+  // @media screen and () {
+  //   flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
+  // }
+
+  // flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
+
+  // &:not(:last-child) {
+  //   margin-right: var(--flexbox-items-gap);
+  // }
 }
 
 .clients-list__icon-box {

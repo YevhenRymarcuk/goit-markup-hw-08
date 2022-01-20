@@ -4,8 +4,10 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  &__container {
-    display: flex;
+  @media screen and (min-width: $tablet) {
+    &__container {
+      display: flex;
+    }
   }
 }
 

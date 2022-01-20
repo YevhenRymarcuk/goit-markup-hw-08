@@ -7,7 +7,9 @@
 }
 
 .information-about-us {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .address {
