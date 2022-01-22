@@ -3,9 +3,14 @@
 
 .header {
   border-bottom: 1px solid #ececec;
+  @media screen and (max-width: ($tablet - 1px)) {
+    &--no-mobile {
+      display: none;
+    }
+  }
 
   @media screen and (min-width: $tablet) {
-    &__container {
+    &--no-mobile {
       display: flex;
     }
   }

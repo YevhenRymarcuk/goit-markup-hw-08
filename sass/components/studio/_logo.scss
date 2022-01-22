@@ -1,18 +1,16 @@
 /* Компонент LOGO */
 
 .logo {
+  display: inline-block;
+
   color: var(--logo-basic-text-color);
 
   font-family: Raleway, sans-serif;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: none;
-
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
 
   @include cssTransition(color);
 
@@ -24,11 +22,28 @@
   &:focus {
     color: var(--primary-text-accent-color);
   }
+
+  @media screen and (max-width: ($tablet - 1px)) {
+    padding: 16px 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .footer__logo {
-  display: inline-block;
-
   margin: 0 0 20px 0;
   padding: 0;
 

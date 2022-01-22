@@ -83,16 +83,16 @@
 }
 
 .footer__form {
-  display: flex;
-  justify-content: start;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: start;
+  }
 }
 
 .form__input--footer-style {
-  display: inline-block;
+  display: block;
 
-  width: 358px;
   height: 50px;
-  margin: 0 12px 0 0;
 
   padding: 15px 16px;
 
@@ -113,6 +113,14 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: inline-block;
+
+    width: 358px;
+
+    margin: 0 12px 0 0;
   }
 }
 
