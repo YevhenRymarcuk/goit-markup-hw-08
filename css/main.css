@@ -315,23 +315,46 @@ input {
 
 .contact-list {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .contact-list__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 .contact-list__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-list {
+    font-size: 14px;
+    line-height: 1.14;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact-list__item:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 50px;
+  }
+}
+
+.contact-list__mail {
+  padding-top: 21px;
+}
+
+.contact-list__phone {
+  padding-bottom: 21px;
 }
 
 .contact-list__mail,
@@ -344,7 +367,6 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 0;
   -webkit-transition-property: color;
   -o-transition-property: color;
   transition-property: color;
@@ -359,6 +381,12 @@ input {
 .contact-list__phone:hover,
 .contact-list__phone:focus {
   color: var(--primary-text-accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .contact-list__mail,
+.contact-list__phone {
+    padding: 32px 0;
+  }
 }
 
 /* Компонент LOGO */
