@@ -91,6 +91,18 @@
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+
+    @media screen and (min-width: $desktop) {
+      &.envelope {
+        width: 16px;
+        height: 12px;
+      }
+
+      &.smartphone {
+        width: 10px;
+        height: 16px;
+      }
+    }
   }
 
   &__item {

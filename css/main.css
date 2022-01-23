@@ -331,6 +331,16 @@ input {
   margin-right: 10px;
   fill: currentColor;
 }
+@media screen and (min-width: 1200px) {
+  .contact-list__icon.envelope {
+    width: 16px;
+    height: 12px;
+  }
+  .contact-list__icon.smartphone {
+    width: 10px;
+    height: 16px;
+  }
+}
 .contact-list__item:not(:last-child) {
   margin-bottom: 10px;
 }
