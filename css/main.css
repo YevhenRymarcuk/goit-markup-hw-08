@@ -992,19 +992,42 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * var(--flexbox-items-gap));
+    margin-left: calc(-1 * var(--flexbox-items-gap));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
-.benefits-list__item {
-  -ms-flex-preferred-size: calc(100% - (3 * var(--flexbox-items-gap) / 4));
-      flex-basis: calc(100% - (3 * var(--flexbox-items-gap) / 4));
+@media screen and (min-width: 768px) {
+  .benefits-list__item {
+    margin-top: var(--flexbox-items-gap);
+    margin-left: var(--flexbox-items-gap);
+    -ms-flex-preferred-size: calc(100% / 2 - var(--flexbox-items-gap));
+        flex-basis: calc(100% / 2 - var(--flexbox-items-gap));
+  }
 }
-.benefits-list__item:not(:last-child) {
-  margin-right: var(--flexbox-items-gap);
+@media screen and (min-width: 1200px) {
+  .benefits-list__item {
+    margin-top: 0;
+    margin-left: 0;
+    -ms-flex-preferred-size: calc(100% - (3 * var(--flexbox-items-gap) / 4));
+        flex-basis: calc(100% - (3 * var(--flexbox-items-gap) / 4));
+  }
+  .benefits-list__item:not(:last-child) {
+    margin-right: var(--flexbox-items-gap);
+  }
 }
 
 .benefits-list__icon-box {
-  width: 270px;
   height: 120px;
   margin-bottom: var(--flexbox-items-gap);
   display: -webkit-box;
@@ -1027,6 +1050,12 @@ input {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .benefits-list__item-title {
+    text-align: start;
+  }
 }
 
 /* Услуги ВебСтудии */

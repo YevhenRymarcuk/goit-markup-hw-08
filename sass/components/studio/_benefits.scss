@@ -3,19 +3,42 @@
 .benefits-list {
   @media screen and (min-width: $tablet) {
     display: flex;
+
+    flex-wrap: wrap;
+
+    margin-top: calc(-1 * var(--flexbox-items-gap));
+    margin-left: calc(-1 * var(--flexbox-items-gap));
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
 .benefits-list__item {
-  flex-basis: calc(100% - (3 * var(--flexbox-items-gap) / 4));
+  @media screen and (min-width: $tablet) {
+    margin-top: var(--flexbox-items-gap);
+    margin-left: var(--flexbox-items-gap);
 
-  &:not(:last-child) {
-    margin-right: var(--flexbox-items-gap);
+    flex-basis: calc(100% / 2 - var(--flexbox-items-gap));
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 0;
+
+    flex-basis: calc(100% - (3 * var(--flexbox-items-gap) / 4));
+
+    &:not(:last-child) {
+      margin-right: var(--flexbox-items-gap);
+    }
   }
 }
 
 .benefits-list__icon-box {
-  width: 270px;
   height: 120px;
   margin-bottom: var(--flexbox-items-gap);
 
@@ -36,4 +59,9 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
 }
