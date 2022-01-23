@@ -1375,12 +1375,63 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .information-about-us {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__contacts {
+    margin-bottom: 0;
+  }
+}
+
+.our-contacts {
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .our-contacts {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-contacts {
+    text-align: start;
+    margin-right: 70px;
   }
 }
 
 .address {
-  width: 231px;
-  margin-right: 70px;
   color: var(--secondary-text-color);
   font-style: normal;
   font-weight: normal;
@@ -1388,13 +1439,13 @@ input {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-
-.address__map {
-  margin-bottom: 9px;
+.address__map, .address__mail {
+  margin-bottom: 8px;
 }
-
-.address__mail {
-  margin-bottom: 9px;
+@media screen and (min-width: 1200px) {
+  .address__map, .address__mail {
+    margin-bottom: 9px;
+  }
 }
 
 .address__mail,
@@ -1419,8 +1470,12 @@ input {
 }
 
 .our-social-networks {
-  padding-top: 12px;
-  margin-right: 93px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .our-social-networks {
+    margin-bottom: 0;
+  }
 }
 .our-social-networks__title {
   margin-bottom: 20px;
@@ -1429,36 +1484,55 @@ input {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--secondary-text-color);
 }
 
-.our-newsletter {
-  padding-top: 12px;
-}
 .our-newsletter__title {
-  margin-bottom: 17px;
+  margin-bottom: 20px;
   color: var(--secondary-text-color);
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .our-newsletter__title {
+    text-align: start;
+  }
+}
 
+.footer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer__form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 .form__input--footer-style {
   display: block;
   height: 50px;
+  margin: 0 0 20px 0;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1503,6 +1577,16 @@ input {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width: 767px) {
+  .form__input--footer-style {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__input--footer-style {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form__input--footer-style {
