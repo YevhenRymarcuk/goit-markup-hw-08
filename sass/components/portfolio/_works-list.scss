@@ -1,20 +1,40 @@
 /* Список работ студии */
 .works-list {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
 
-  margin-top: calc(-1 * var(--flexbox-items-gap));
-  margin-left: calc(-1 * var(--flexbox-items-gap));
+    margin-top: calc(-1 * var(--flexbox-items-gap));
+    margin-left: calc(-1 * var(--flexbox-items-gap));
+  }
 }
 
 .works-list__item {
-  margin-top: var(--flexbox-items-gap);
-  margin-left: var(--flexbox-items-gap);
+  display: flex;
 
-  flex-basis: calc(100% / 3 - var(--flexbox-items-gap));
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: var(--flexbox-items-gap);
+    margin-left: var(--flexbox-items-gap);
+
+    flex-basis: calc(100% / 2 - var(--flexbox-items-gap));
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc(100% / 3 - var(--flexbox-items-gap));
+  }
 }
 
 .works-list__caption-border {
+  flex-grow: 1;
+
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -22,10 +42,14 @@
 }
 
 .works-list__link-box {
+  display: flex;
+  flex-direction: column;
   @include cssTransition(box-shadow);
 }
 
 .works-list__link {
+  display: flex;
+
   text-decoration: none;
 
   &:hover,
@@ -77,12 +101,12 @@
 }
 
 .works-list__title {
+  margin-bottom: 4px;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  text-align: left;
-  margin-bottom: 4px;
 }
 
 .works-list__text {
@@ -92,5 +116,4 @@
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  text-align: left;
 }
