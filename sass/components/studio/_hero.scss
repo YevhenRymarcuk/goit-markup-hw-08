@@ -1,7 +1,6 @@
 /* Блок "ГЕРОЙ"*/
 .hero {
   background-color: var(--secondary-bg-color);
-  min-height: 600px;
 }
 
 .hero__content {
@@ -9,13 +8,18 @@
 
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/background-hero.jpg);
   background-size: cover;
   background-position: center;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
