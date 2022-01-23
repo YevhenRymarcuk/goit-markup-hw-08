@@ -7,6 +7,13 @@
 
   margin-top: calc(-1 * var(--flexbox-items-gap));
   margin-left: calc(-1 * var(--flexbox-items-gap));
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
 .clients-list__item {
@@ -15,15 +22,20 @@
 
   flex-basis: calc(100% / 2 - var(--flexbox-items-gap));
 
-  // @media screen and () {
-  //   flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
-  // }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 3 - var(--flexbox-items-gap));
+  }
 
-  // flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-left: 0;
 
-  // &:not(:last-child) {
-  //   margin-right: var(--flexbox-items-gap);
-  // }
+    flex-basis: calc(100% - (5 * var(--flexbox-items-gap) / 6));
+
+    &:not(:last-child) {
+      margin-right: var(--flexbox-items-gap);
+    }
+  }
 }
 
 .clients-list__icon-box {
@@ -31,7 +43,6 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
   height: 92px;
 
   border: 1px solid var(--primary-icon-color);
