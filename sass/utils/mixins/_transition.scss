@@ -7,3 +7,9 @@
   transition-duration: $duration;
   transition-timing-function: $timingFunction;
 }
+// Миксин позволяет добавлять анимируемые свойства от 1 до бесконечности
+
+//  // // // // // @include cssTransition(color background-color box-shadow);
+// В прмере добавлены 3 свойства кнопки   ^^^^   ^^^^^^^^^^^^^^   ^^^^^^^^
+// фильтра из Портфолио.
+// Свойства добавлять через пробел без запятых.
